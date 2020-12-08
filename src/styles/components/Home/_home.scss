@@ -1,3 +1,259 @@
-.naaav {
-  background-color: aqua;
+.home {
+  max-width: 100%;
+  .nav {
+    max-width: 85%;
+    margin: 0 auto;
+    .logo {
+      text-align: right;
+    }
+    .links {
+      text-align: center;
+    }
+    .button {
+      align-content: center;
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  .second {
+    margin-top: 10px;
+    max-width: 85%;
+    margin: 0 auto;
+
+    .right {
+      align-self: center;
+      .title {
+        color: $myBlue;
+      }
+      .button {
+        border-radius: 5px;
+        border-color: $myBlue;
+        border-width: 1px;
+        color: $myBlue;
+        margin: 2px;
+        padding: 10px 25px;
+        background-color: $myWhite;
+      }
+      .button:hover {
+        cursor: pointer;
+        background-color: $myBlue;
+        color: $myWhite;
+      }
+    }
+    .left {
+      .bg {
+        z-index: -1;
+        position: absolute;
+        right: 1px;
+      }
+    }
+  }
+
+  .third {
+    margin-top: 10px;
+    max-width: 85%;
+    margin: 0 auto;
+
+    .right {
+      padding: 2rem;
+      width: 100%;
+      height: auto;
+    }
+    .left {
+      text-align: right;
+      align-self: center;
+
+      .title {
+        color: $myBlue;
+        border-right: solid $myGreen;
+        text-indent: 10px;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        text-align: center;
+        padding-top: 5vw;
+      }
+      Figure {
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px 1px $myShadow;
+        padding: 10px;
+        width: 4rem;
+        height: 4rem;
+        white-space: nowrap;
+        text-align: center;
+      }
+    }
+  }
+
+  .fourth {
+    margin-top: 10px;
+    max-width: 85%;
+    margin: 0 auto;
+    text-align: right;
+    Container {
+      max-width: "100%";
+    }
+    .up {
+      color: $myBlue;
+      border-right: solid $myGreen;
+      text-indent: 10px;
+    }
+    .image {
+      width: 40%;
+      height: auto;
+    }
+    .down__left {
+      text-align: right;
+    }
+    .step {
+      margin-bottom: 0px;
+      display: inline-block;
+      text-indent: 0.5rem;
+    }
+    .step__description {
+      text-indent: 1rem;
+    }
+    .fa-arrow-circle-down {
+      color: $myCloudy;
+      background-color: $myBlue;
+      border-radius: 100%;
+      font-size: 1.7em;
+    }
+    .fa-check-circle {
+      color: $myGreen;
+      font-size: 1.7em;
+    }
+  }
+
+  .fifth {
+    margin-top: 10px;
+    background-color: $myBlue;
+
+    .right {
+      text-align: right;
+      color: $myWhite;
+      align-self: center;
+
+      .input {
+        width: 100%;
+        height: 3em;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+      }
+      .submit {
+        position: absolute;
+        left: 1.6em;
+        top: 5.2em;
+        border: none;
+        height: 2em;
+        width: 6em;
+        border-radius: 8px;
+        background-color: $myBlue;
+        font-weight: bold;
+        color: $myWhite;
+      }
+      .store {
+        display: flex;
+        width: 55%;
+        flex-flow: nowrap;
+      }
+      .store__icon {
+        width: 50%;
+        margin: 5px;
+        height: auto;
+        border-radius: 1vw;
+      }
+      .store__icon:hover {
+        cursor: pointer;
+      }
+    }
+
+    .left {
+      text-align: center;
+    }
+    .left__image {
+      margin-top: 10px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+  }
+
+  .sixth {
+    margin-top: 50px;
+    margin: 5em;
+    text-align: right;
+    border-radius: 2vw;
+    box-shadow: 1px 1px 10px 1px $myShadow;
+    background-image: url("../assets/Path15631.png");
+    background-repeat: no-repeat;
+    z-index: -1;
+    top: -30px;
+
+    .right {
+      padding: 2em;
+      align-self: center;
+      .title {
+        text-indent: 0.2em;
+        color: $myBlue;
+        border-right: solid $myGreen;
+      }
+      .input {
+        width: 100%;
+        height: 3em;
+        border-radius: 8px;
+        outline: none;
+        border: solid $myWhite;
+      }
+      .button {
+        position: absolute;
+        left: 2.5em;
+        top: 8.7em;
+        border: none;
+        height: 2em;
+        width: 7em;
+        border-radius: 8px;
+        background-color: $myBlue;
+        font-weight: bold;
+        color: $myWhite;
+      }
+    }
+    .left {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .seventh {
+    margin-top: "10px";
+    background-color: $myBlue;
+    .right {
+      text-align: right;
+      color: $myWhite;
+      text-align: center;
+    }
+    .left {
+      align-self: center;
+      text-align: center;
+    }
+  }
+
+  .footer {
+    margin-top: 50px;
+    text-align: right;
+    max-width: 85%;
+    margin: 0 auto;
+    .store {
+      width: auto;
+      height: 2rem;
+      border-radius: 5px;
+      margin: 2px;
+    }
+    .store:hover {
+      cursor: pointer;
+    }
+  }
 }
