@@ -1,0 +1,53 @@
+.blueDownload {
+  margin-top: 10px;
+  background-color: $myBlue;
+
+  .right {
+    text-align: right;
+    color: $myWhite;
+    align-self: center;
+
+    .input {
+      width: 100%;
+      height: 3em;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+    .submit {
+      position: absolute;
+      left: 1.6em;
+      top: 5.2em;
+      border: none;
+      height: 2em;
+      width: 6em;
+      border-radius: 8px;
+      background-color: $myBlue;
+      font-weight: bold;
+      color: $myWhite;
+    }
+    .store {
+      display: flex;
+      width: 55%;
+      flex-flow: nowrap;
+    }
+    .store__icon {
+      width: 50%;
+      margin: 5px;
+      height: auto;
+      border-radius: 1vw;
+    }
+    .store__icon:hover {
+      cursor: pointer;
+    }
+  }
+
+  .left {
+    text-align: center;
+  }
+  .left__image {
+    margin-top: 10px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+}

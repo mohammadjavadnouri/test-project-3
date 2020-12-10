@@ -1,0 +1,40 @@
+.darmanitoOptions {
+  max-width: 85%;
+  margin: 0 auto;
+  margin-top: 2vw;
+  text-align: right;
+
+  Container {
+    max-width: "100%";
+  }
+  .up {
+    color: $myBlue;
+    border-right: solid $myGreen;
+    text-indent: 10px;
+  }
+  .image {
+    width: 40%;
+    height: auto;
+  }
+  .down__left {
+    text-align: right;
+  }
+  .step {
+    margin-bottom: 0px;
+    display: inline-block;
+    text-indent: 0.5rem;
+  }
+  .step__description {
+    text-indent: 1rem;
+  }
+  .fa-arrow-circle-down {
+    color: $myCloudy;
+    background-color: $myBlue;
+    border-radius: 100%;
+    font-size: 1.7em;
+  }
+  .fa-check-circle {
+    color: $myGreen;
+    font-size: 1.7em;
+  }
+}

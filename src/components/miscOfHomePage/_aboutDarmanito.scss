@@ -1,0 +1,37 @@
+.aboutDarmanito {
+  max-width: 85%;
+  margin: 0 auto;
+  margin-top: 2vw;
+
+  .right {
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+  }
+  .left {
+    text-align: right;
+    align-self: center;
+
+    .title {
+      color: $myBlue;
+      border-right: solid $myGreen;
+      text-indent: 10px;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      text-align: center;
+      padding-top: 5vw;
+    }
+    Figure {
+      border-radius: 5px;
+      box-shadow: 1px 1px 10px 1px $myShadow;
+      padding: 10px;
+      width: 4rem;
+      height: 4rem;
+      white-space: nowrap;
+      text-align: center;
+    }
+  }
+}

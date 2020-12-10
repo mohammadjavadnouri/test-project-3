@@ -1,0 +1,55 @@
+.detailsAndMessage {
+  padding: 3rem;
+  .right {
+    text-align: right;
+    .message {
+      display: block;
+      height: 13rem;
+      top: 0;
+      text-align: right;
+    }
+    .message::placeholder {
+      text-align: start;
+    }
+
+    .button {
+      border-radius: 5px;
+      border-color: $myBlue;
+      border-width: 1px;
+      color: $myBlue;
+      margin: 2px;
+      padding: 10px 25px;
+      background-color: $myWhite;
+      width: 100%;
+    }
+    .button:hover {
+      cursor: pointer;
+      background-color: $myBlue;
+      color: $myWhite;
+    }
+  }
+  .left {
+    .address {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      gap: 5px;
+      position: absolute;
+      padding: 0.8em;
+      right: 20%;
+      bottom: 2em;
+      width: 60%;
+      height: auto;
+      border-radius: 1.5em;
+      background-color: $myWhite;
+      font-size: 0.75em;
+      text-align: right;
+      box-shadow: 1px 1px 10px 1px $myShadow;
+      .address__text__r {
+        line-height: 0.5em;
+      }
+      .coloring {
+        color: $myEpiBlue;
+      }
+    }
+  }
+}

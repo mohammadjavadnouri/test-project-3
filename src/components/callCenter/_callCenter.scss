@@ -1,0 +1,13 @@
+.callCenter {
+  margin-top: "10px";
+  background-color: $myBlue;
+  .right {
+    text-align: right;
+    color: $myWhite;
+    text-align: center;
+  }
+  .left {
+    align-self: center;
+    text-align: center;
+  }
+}

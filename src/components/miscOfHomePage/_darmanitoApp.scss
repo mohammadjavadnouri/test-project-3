@@ -1,0 +1,35 @@
+.darmanitoApp {
+  margin-top: 10px;
+  max-width: 85%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  overflow: hidden;
+
+  .right {
+    align-self: center;
+    .title {
+      color: $myBlue;
+    }
+    .button {
+      border-radius: 5px;
+      border-color: $myBlue;
+      border-width: 1px;
+      color: $myBlue;
+      margin: 2px;
+      padding: 10px 25px;
+      background-color: $myWhite;
+    }
+    .button:hover {
+      cursor: pointer;
+      background-color: $myBlue;
+      color: $myWhite;
+    }
+  }
+  .left {
+    .bg {
+      z-index: -1;
+      position: absolute;
+      right: 1px;
+    }
+  }
+}
