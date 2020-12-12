@@ -1,10 +1,11 @@
 import React from 'react';
-import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-bootstrap';
+import { Container, Col, Row, Button, Nav, Image, Form, Figure, Navbar } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import logo from "../../assets/Group152.svg";
 
 const Header = () => (
-        <Row className="header">
+    <Navbar sticky="top"  className="navbar">
+        <Row className="header" >
             <Col md={2} className="logo">
                 <Image src={logo} alt="Logo" />
             </Col>
@@ -24,10 +25,12 @@ const Header = () => (
                     </Nav.Item>
                 </Nav>
             </Col>
-            <Col md={2} className="button">
-                <Button variant="primary">دانلود درمانیتو</Button>
+            <Col md={2} className="buttonCol">
+                <Button variant="primary" className="button">دانلود درمانیتو</Button>
             </Col>
         </Row>
+    </Navbar>
+
 )
 
 export default Header;

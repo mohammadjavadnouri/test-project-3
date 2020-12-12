@@ -11,18 +11,7 @@
       color: $myBlue;
     }
     .button {
-      border-radius: 5px;
-      border-color: $myBlue;
-      border-width: 1px;
-      color: $myBlue;
-      margin: 2px;
-      padding: 10px 25px;
-      background-color: $myWhite;
-    }
-    .button:hover {
-      cursor: pointer;
-      background-color: $myBlue;
-      color: $myWhite;
+      @include commonButton;
     }
   }
   .left {

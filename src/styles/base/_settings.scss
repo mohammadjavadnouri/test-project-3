@@ -5,3 +5,37 @@ $myEpiBlue: #2361b5;
 $myShadow: rgb(146, 191, 230);
 $myWhite: white;
 $myBlack: black;
+$myPlaceHolderInput: #666666;
+
+$heading1: 36px;
+$heading2: 24px;
+$heading3: 20px;
+$body2: 16px;
+$body1: 14px;
+
+@mixin primaryButton {
+  background-color: $myBlue;
+  color: $myWhite;
+  border-radius: 8px;
+  width: 9rem;
+  white-space: nowrap;
+  &:hover {
+    background-color: $myCloudy;
+    color: $myBlue;
+  }
+}
+
+@mixin commonButton {
+  border-color: $myBlue;
+  background-color: $myWhite;
+  color: $myBlue;
+  border-radius: 8px;
+  width: 10rem;
+  white-space: nowrap;
+  margin: 0.5rem;
+  &:hover {
+    cursor: pointer;
+    background-color: $myBlue;
+    color: $myWhite;
+  }
+}
