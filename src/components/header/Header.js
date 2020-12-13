@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Col, Row, Button, Nav, Image, Form, Figure, Navbar } from 'react-bootstrap';
+import { Col, Row, Button, Nav, Image, Navbar } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import logo from "../../assets/Group152.svg";
 
@@ -21,7 +21,7 @@ const Header = () => (
                         <Link to="/contacts" className="link">تماس باما</Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Link to="/" className="link">عضویت داروخانه ها</Link>
+                        <Link to="/join" className="link">عضویت داروخانه ها</Link>
                     </Nav.Item>
                 </Nav>
             </Col>

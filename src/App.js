@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contacts from './pages/Contacts';
+import Join from './pages/Join';
 import NotFound from './pages/NotFound';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -24,6 +25,7 @@ const routes = (
                 <Route path="/" component={Home} exact={true}/>
                 <Route path="/about" component={About} />
                 <Route path="/contacts" component={Contacts} />
+                <Route path="/join" component={Join}/>
                 <Route component={NotFound} />
             </Switch>
         </div>

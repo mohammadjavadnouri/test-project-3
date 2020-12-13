@@ -1,7 +1,7 @@
 .navbar {
   background-color: $myWhite;
   .header {
-    max-width: 85%;
+    width: 85%;
     margin: 0 auto;
 
     .logo {
@@ -29,7 +29,7 @@
       align-items: center;
       display: flex;
       .button {
-        @include primaryButton;
+        @include ghostButton;
       }
     }
   }

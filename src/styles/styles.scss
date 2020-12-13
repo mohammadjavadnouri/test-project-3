@@ -4,11 +4,12 @@
 @import "../pages/home";
 @import "../pages/about";
 @import "../pages/contacts";
+@import "../pages/join";
 @import "../components/header/header";
 @import "../components/footer/footer";
 @import "../components/miscOfNotFound/notFound";
 @import "../components/callCenter/callCenter";
-@import "../components/miscOfHomePage/fastJoin";
+@import "../components/miscOfHomePage/joinDrugStore";
 @import "../components/miscOfHomePage/blueDownload";
 @import "../components/miscOfHomePage/darmanitoOptions";
 @import "../components/miscOfHomePage/aboutDarmanito";
@@ -16,3 +17,5 @@
 @import "../components/UpperBlueBarOfAboutPage/upperBlueBarOfAboutPage";
 @import "../components/UpperBlueBarOfContactsPage/UpperBlueBarOfContactsPage";
 @import "../components/detailsAndMessage/detailsAndMessage";
+@import "../components/miscOfHomePage/tellNumberInput";
+@import "../components/joinForm/joinForm";

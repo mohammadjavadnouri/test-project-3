@@ -1,0 +1,34 @@
+.tellNumberInput {
+  .input {
+    height: 3em;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: $myWhite;
+    float: right;
+    width: 100%;
+  }
+  .input:hover {
+    background-color: rgb(245, 244, 244);
+  }
+  .input:focus {
+    border: solid $myBlue;
+  }
+  .input[type="number"]::-webkit-inner-spin-button,
+  .input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .button {
+    position: absolute;
+    margin-top: 0.35rem;
+    left: 2.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: $myBlue;
+    font-weight: bold;
+    color: $myWhite;
+    width: 7rem;
+    white-space: nowrap;
+  }
+}

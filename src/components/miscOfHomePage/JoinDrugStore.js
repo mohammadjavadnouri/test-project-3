@@ -1,20 +1,16 @@
 import React from 'react';
 import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-bootstrap';
 import healthDoctor from "../../assets/healthDoctor.png";
+import TellNumberInput from "./TellNumberInput";
 
-const FastJoin = () => (
-    <Row className="fastJoin" >
+const JoinDrugStore = () => (
+    <Row className="joinDrugStore" >
     <Col sm={6} className="right">
         <h4 className="title">عضویت داروخانه یا مراکز درمانی</h4>
         <p>اگر به عنوان داروخانه یا مرکز درمانی قصد دارید در روند درمان و کسب کار خودتان تغییری ایجاد کنید درمانیتو منتظر شماست</p>
-        <Form>
-            <Form.Group controlId="number">
-                <Form.Control className="input" type="number" placeholder="شماره همراه را وارد کنید 09000000000" />
-            </Form.Group>
-            <Button className="button" variant="primary" type="submit">
-                ثبت نام سریع
-            </Button>
-        </Form>
+        {/* handmade Component start */}
+        <TellNumberInput buttonText="ثبت نام سریع"/>
+        {/* handmade Component end */}
     </Col>
     <Col sm={6} className="left">
         <Image src={healthDoctor} />
@@ -22,4 +18,4 @@ const FastJoin = () => (
     </Row>
 );
 
-export default FastJoin;
+export default JoinDrugStore;

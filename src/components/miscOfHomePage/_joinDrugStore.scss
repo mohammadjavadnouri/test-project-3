@@ -1,4 +1,4 @@
-.fastJoin {
+.joinDrugStore {
   margin-top: 50px;
   margin: 5em;
   text-align: right;
@@ -17,28 +17,10 @@
       color: $myBlue;
       border-right: solid $myGreen;
     }
-    .input {
-      width: 100%;
-      height: 3em;
-      border-radius: 8px;
-      outline: none;
-      border: solid $myWhite;
-    }
-    .button {
-      position: absolute;
-      left: 2.5em;
-      top: 8.7em;
-      border: none;
-      height: 2em;
-      width: 7em;
-      border-radius: 8px;
-      background-color: $myBlue;
-      font-weight: bold;
-      color: $myWhite;
-    }
   }
   .left {
     width: 100%;
     height: auto;
+    overflow: hidden;
   }
 }

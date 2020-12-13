@@ -19,6 +19,7 @@ $body1: 14px;
   border-radius: 8px;
   width: 9rem;
   white-space: nowrap;
+  border: none;
   &:hover {
     background-color: $myCloudy;
     color: $myBlue;
@@ -37,5 +38,18 @@ $body1: 14px;
     cursor: pointer;
     background-color: $myBlue;
     color: $myWhite;
+  }
+}
+
+@mixin ghostButton {
+  background-color: $myCloudy;
+  color: $myBlue;
+  border-radius: 8px;
+  width: 9rem;
+  white-space: nowrap;
+  border: none;
+  &:hover {
+    background-color: $myCloudy;
+    color: $myBlue;
   }
 }
