@@ -1,0 +1,7 @@
+.joinFormNumber2 {
+  text-align: right;
+  margin-top: 2rem;
+  .uploadButton {
+    @include commonButton;
+  }
+}
