@@ -5,12 +5,12 @@ class JoinFormNumber1 extends React.Component {
     constructor() {
         super();
         this.state = { city: '' };
-        this.handleChange = this.handleChange.bind(this);
+        this.handleCityName = this.handleCityName.bind(this);
     }
 
-    handleChange(evt){
+    handleCityName(evt){
         this.setState({city: evt.target.value})
-
+        
     }
 
     render () {
@@ -62,11 +62,17 @@ class JoinFormNumber1 extends React.Component {
                         </Form.Group>
                         <Form.Group controlId="formBasicText">
                             <Form.Label>نام داروخانه / فروشگاه</Form.Label>
-                            <Form.Control type="text" placeholder="نام داروخانه یا فروشگاه شما" />
+                            <Form.Control 
+                                type="text" 
+                                placeholder="نام داروخانه یا فروشگاه شما"
+                                onChange={this.props.handleDrugstoreName} />
                         </Form.Group>
                         <Form.Group controlId="exampleForm.ControlSelect1">
                             <Form.Label>شهر</Form.Label>
-                            <Form.Control as="select" onChange={this.handleChange}>
+                            <Form.Control 
+                                as="select" 
+                                onChange={(evt) => {this.handleCityName(evt); this.props.handleCityName(evt)} }
+                                >
                                 <option></option>
                                 <option>تهران</option>
                                 <option>اصفهان</option>
@@ -81,16 +87,28 @@ class JoinFormNumber1 extends React.Component {
                 <Col sm={6}>
                     <Form>
                         <Form.Group controlId="formBasicText">
-                            <Form.Label>شماره نظام پزشکی</Form.Label>
-                            <Form.Control type="number" placeholder="فقط بخش عددی را وارد کنید" />
+                            <Form.Label>شماره نظام پزشکی
+                                
+                                <span>{" "} فقط عدد </span>
+                            </Form.Label>
+                            <Form.Control 
+                                type="number" 
+                                placeholder="فقط بخش عددی را وارد کنید"
+                                onChange={this.props.handleMedicalCouncilID} />
                         </Form.Group>
                         <Form.Group controlId="formBasicText">
                             <Form.Label>شماره داروخانه</Form.Label>
-                            <Form.Control type="text" placeholder="اطلاعات تماس به کاربر نمایش داده میشود" />
+                            <Form.Control 
+                                type="text" 
+                                placeholder="اطلاعات تماس به کاربر نمایش داده میشود" 
+                                onChange={this.props.handleDrugstoreNumber}
+                                />
                         </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlSelect1">
+                        <Form.Group controlId="exampleForm.ControlSelect1" >
                             <Form.Label>منطقه</Form.Label>
-                            <Form.Control as="select">
+                            <Form.Control 
+                                as="select" 
+                                onChange={this.props.handleZone}>
                                 <option>{zone1}</option>
                                 <option>{zone2}</option>
                                 <option>{zone3}</option>
@@ -105,7 +123,10 @@ class JoinFormNumber1 extends React.Component {
                     <Form>
                         <Form.Group controlId="formBasicText">
                             <Form.Label>آدرس دقیق</Form.Label>
-                            <Form.Control type="number" placeholder="آدرس را با - جدا کنید" />
+                            <Form.Control 
+                                type="text" 
+                                placeholder="آدرس را با - جدا کنید"
+                                onChange={this.props.handleAddress} />
                         </Form.Group>
                     </Form>
                 </Col>
@@ -120,19 +141,31 @@ class JoinFormNumber1 extends React.Component {
                     </div>
                     <Form>
                         <Row>
-                            <Col sm={2}>
-                                <Form.Check
-                                    type="radio"
-                                    label="روزانه"
-                                    name="workHours"
-                                />
-                            </Col>
                             <Col sm={3}>
-                                <Form.Check
-                                    type="radio"
-                                    label="شبانه روزی"
-                                    name="workHours"
-                                />
+                                <div  className="workHours">
+                                    <Form.Check
+                                        type="radio"
+                                        id="daily"
+                                        label="روزانه"
+                                        value="daily"
+                                        name="workHours"
+                                        className="radio"
+                                        onChange={this.props.handleDayOrNight}
+                                    />
+                                </div>
+                            </Col>
+                            <Col sm={4} >
+                                <div  className="workHours">
+                                    <Form.Check
+                                        type="radio"
+                                        id="dayAndNight"
+                                        label="شبانه روزی"
+                                        value="dayAndNight"
+                                        name="workHours"
+                                        className="radio"
+                                        onChange={this.props.handleDayOrNight}
+                                    />
+                                </div>
                             </Col>
                         </Row>
                     </Form>
@@ -145,10 +178,10 @@ class JoinFormNumber1 extends React.Component {
                     </div>
                     <Form>
                         <Row>
-                            <Col sm={3}>
+                            <Col sm={3} >
                                 <Form.Control type="string"/>
                             </Col>
-                            <Col sm={3}>
+                            <Col sm={3} >
                                 <Form.Control type="string"/>
                             </Col>
                         </Row>
@@ -156,9 +189,6 @@ class JoinFormNumber1 extends React.Component {
                 </Col>
             </Row>
             
-            <Row>
-                <Button className="uploadButton">آپلود عکس داروخانه</Button>
-            </Row>
         </Container>
         )
     }

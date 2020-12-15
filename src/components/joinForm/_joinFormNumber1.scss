@@ -4,4 +4,21 @@
   .uploadButton {
     @include commonButton;
   }
+  .workHours {
+    border-radius: 8px;
+    padding: 0.3rem;
+  }
+
+  .workHours:hover {
+    background-color: $myCloudy;
+    border: 1px solid $myBlue;
+  }
+
+  .radio {
+    white-space: nowrap;
+  }
+
+  .radio label {
+    text-indent: 15px;
+  }
 }

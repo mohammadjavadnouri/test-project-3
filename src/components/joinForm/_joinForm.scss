@@ -1,0 +1,12 @@
+.joinForm {
+  .buttons {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    place-content: left;
+    align-content: left;
+  }
+  Button {
+    @include primaryButton;
+  }
+}
