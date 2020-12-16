@@ -18,14 +18,14 @@ const Footer = () => (
             <Col sm={2} >
                 <h5>خدمات درمانیتو</h5>
                 <p>داروخانه آنلاین</p>
-                <p>فروشگاه آنلاین</p>
+                <Link to="/onlineStore"><p>فروشگاه آنلاین</p></Link>
                 <p>ویزیت آنلاین</p>
                 <p>پرونده پزشکی</p>
             </Col>
             <Col sm={2}>
                 <h5>صفحات درمانیتو</h5>
-                <p>تماس باما</p>
-                <p>درباره ما</p>
+                <Link to="/contacts" className="link"><p>تماس باما</p></Link>
+                <Link to="/about" className="link"><p>درباره ما</p></Link>
                 <p>سوالات متداول</p>
                 <p>قوانین و شرایط</p>
             </Col>

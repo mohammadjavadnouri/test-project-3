@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-bootstrap';
 import healthDoctor from "../../assets/healthDoctor.png";
-import TellNumberInput from "./TellNumberInput";
+import TellNumberInput from "../tellNumberInput/TellNumberInput";
 
 const JoinDrugStore = () => (
     <Row className="joinDrugStore" >

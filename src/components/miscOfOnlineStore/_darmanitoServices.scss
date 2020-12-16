@@ -1,0 +1,55 @@
+.darmanitoServices {
+  text-align: right;
+  margin: 4rem;
+
+  .cards {
+    text-align: center;
+    margin: 0 auto;
+    .cardRightCol {
+      .cardRight {
+        height: 25rem;
+        width: 25rem;
+        border-radius: 30px;
+        box-shadow: 2px 1px 10px 1px $myShadow;
+        text-align: right;
+        margin: 0 auto;
+        .cardImageRight {
+          width: 6rem;
+          height: auto;
+          margin: 3rem auto;
+          margin-bottom: 2rem;
+        }
+        .buttonContainer {
+          text-align: center;
+          Button {
+            @include primaryButton;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .cardLeftCol {
+      .cardLeft {
+        height: 25rem;
+        width: 25rem;
+        border-radius: 30px;
+        box-shadow: 1px 1px 10px 1px $myShadow;
+        text-align: right;
+        margin: 0 auto;
+        .cardImageLeft {
+          width: 7rem;
+          height: auto;
+          margin: 1rem auto;
+          padding: 1rem;
+          margin-bottom: 2rem;
+        }
+        .buttonContainer {
+          text-align: center;
+          Button {
+            @include primaryButton;
+          }
+        }
+      }
+    }
+  }
+}

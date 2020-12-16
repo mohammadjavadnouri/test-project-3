@@ -5,6 +5,7 @@
 @import "../pages/about";
 @import "../pages/contacts";
 @import "../pages/join";
+@import "../pages/onlineStore";
 @import "../components/header/header";
 @import "../components/footer/footer";
 @import "../components/miscOfNotFound/notFound";
@@ -17,9 +18,12 @@
 @import "../components/UpperBlueBarOfAboutPage/upperBlueBarOfAboutPage";
 @import "../components/UpperBlueBarOfContactsPage/UpperBlueBarOfContactsPage";
 @import "../components/detailsAndMessage/detailsAndMessage";
-@import "../components/miscOfHomePage/tellNumberInput";
+@import "../components/tellNumberInput/tellNumberInput";
 @import "../components/joinForm/joinForm";
 @import "../components/joinForm/joinFormNumber1";
 @import "../components/joinForm/joinFormNumber2";
 @import "../components/joinForm/joinFormNumber3";
 @import "../components/joinForm/uploadImage";
+@import "../components/miscOfOnlineStore/beEffectiveInHealth";
+@import "../components/miscOfOnlineStore/middleBlueBar";
+@import "../components/miscOfOnlineStore/darmanitoServices";

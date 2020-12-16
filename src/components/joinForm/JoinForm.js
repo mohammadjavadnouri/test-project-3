@@ -1,5 +1,6 @@
 import React from 'react';
 import {Container, Row, Col, FormGroup, Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 import JoinFormNumber1 from './JoinFormNumber1';
 import JoinFormNumber2 from './JoinFormNumber2';
 import JoinFormNumber3 from './JoinFormNumber3';
@@ -136,16 +137,17 @@ class JoinForm extends React.Component{
                 <Row >
                         <div className="buttons">
                             {pageNumber === 3 ? 
-                                null : 
-                                pageNumber === 2 ? 
-                                <Button onClick={this.increaseFunc}>تکمیل ثبت نام</Button> : 
-                                <Button onClick={this.increaseFunc}>مرحله بعد</Button>}
-                            {pageNumber === 3 ? 
-                                <Button onClick={this.decreaseFunc}>برگشت</Button> : 
+                                <Link to="/"><Button>برگشت</Button></Link> : 
                                 pageNumber === 2 ? 
                                 <Button onClick={this.decreaseFunc}>ویرایش اطلاعات</Button> : 
                                 pageNumber === 0 ? null : 
                                 <Button onClick={this.decreaseFunc}>مرحله قبل</Button>}
+                            {pageNumber === 3 ? 
+                                null : 
+                                pageNumber === 2 ? 
+                                <Button onClick={this.increaseFunc}>تکمیل ثبت نام</Button> : 
+                                <Button onClick={this.increaseFunc}>مرحله بعد</Button>}
+                            
                         </div>
                 </Row>
             </Container>

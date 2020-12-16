@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 import doctor from "../../assets/doctor_two_color.svg";
+
 
 const DarmanitoApp = () => (
     <Row className="darmanitoApp" >
@@ -13,7 +15,7 @@ const DarmanitoApp = () => (
             </Row>
             <Row>
                 <Button className="button">دانلود درمانیتو</Button>
-                <Button className="button">عضویت داروخانه ها</Button>
+                <Link to="/join"><Button className="button">عضویت داروخانه ها</Button></Link>
             </Row>
         </Col>
         <Col sm={6} className="left">

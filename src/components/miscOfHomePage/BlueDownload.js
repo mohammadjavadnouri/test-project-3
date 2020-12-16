@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row, Image } from 'react-bootstrap';
-import TellNumberInput from "./TellNumberInput";
+import TellNumberInput from "../tellNumberInput/TellNumberInput";
 import damanitoApp from "../../assets/DarmanitoApp.png";
 import downloadBlueButton from "../../assets/downloadBlueButton.png";
 import bazzarBlueButton from "../../assets/bazzarBlueButton.png";

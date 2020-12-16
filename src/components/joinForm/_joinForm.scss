@@ -8,5 +8,6 @@
   }
   Button {
     @include primaryButton;
+    text-decoration: none;
   }
 }

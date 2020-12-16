@@ -12,6 +12,7 @@
     }
     .button {
       @include commonButton;
+      text-decoration: none;
     }
   }
   .left {
