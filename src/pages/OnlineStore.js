@@ -7,6 +7,7 @@ import BeEffectiveInHealth from '../components/miscOfOnlineStore/BeEffectiveInHe
 import MiddleBlueBar from '../components/miscOfOnlineStore/MiddleBlueBar';
 import DarmanitoServices from '../components/miscOfOnlineStore/DarmanitoServices';
 
+
 const OnlineStore = () => (
     <Container className="onlineStore">
 
@@ -16,7 +17,7 @@ const OnlineStore = () => (
         <DarmanitoServices />
         <CallCenter />
         <Footer />
-
+        
     </Container>
 )
 

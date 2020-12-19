@@ -1,28 +1,39 @@
+.navbar__small {
+  display: none;
+}
 .navbar {
   background-color: $myWhite;
   white-space: nowrap;
+  .header__smaill {
+    display: none;
+  }
   .header {
     width: 85%;
     margin: 0 auto;
-
     .logo {
       text-align: right;
     }
     .links {
+      margin: 0 auto;
       text-align: center;
-      align-self: center;
-      .link {
-        margin: 1rem;
-        color: $myBlack;
-        border-bottom: solid $myWhite;
-        transition: 0.4s ease;
-        text-decoration: none;
-      }
-      .link:hover {
-        color: $myBlue;
-        border-bottom: solid $myGreen;
-        text-indent: 10px;
-        text-decoration: none;
+      .Navlinks {
+        margin: 0 auto;
+        text-align: center;
+        .linkItem {
+          .link {
+            margin: 1rem;
+            color: $myBlack;
+            border-bottom: solid $myWhite;
+            transition: 0.4s ease;
+            text-decoration: none;
+          }
+          .link:hover {
+            color: $myBlue;
+            border-bottom: solid $myGreen;
+            text-indent: 10px;
+            text-decoration: none;
+          }
+        }
       }
     }
     .buttonCol {
@@ -33,5 +44,47 @@
         @include ghostButton;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar__small {
+    display: none;
+  }
+  .navbar {
+    .header__smaill {
+      display: none;
+    }
+    .header {
+      width: 90%;
+      .links {
+        .Navlinks {
+          margin: 0 auto;
+          text-align: right;
+          .linkItem {
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            .link {
+              margin: 0;
+            }
+          }
+        }
+      }
+      .buttonCol {
+        place-content: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar {
+    display: none;
+  }
+  .navbar__small {
+    display: block;
+    background-color: rgb(6, 180, 29);
   }
 }

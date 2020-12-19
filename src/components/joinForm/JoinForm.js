@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 import JoinFormNumber1 from './JoinFormNumber1';
 import JoinFormNumber2 from './JoinFormNumber2';
 import JoinFormNumber3 from './JoinFormNumber3';
+import JoinFormNumber4 from './JoinFormNumber4';
 import UploadImage from './UploadImage';
-
 
 class JoinForm extends React.Component{
     constructor() {
@@ -116,7 +116,7 @@ class JoinForm extends React.Component{
                 />;
                 break;
             case 3:
-                formNumber = <div>Modal</div>;
+                formNumber = <JoinFormNumber4 />;
                 break;
         }
         
@@ -136,9 +136,7 @@ class JoinForm extends React.Component{
                 </Row>
                 <Row >
                         <div className="buttons">
-                            {pageNumber === 3 ? 
-                                <Link to="/"><Button>برگشت</Button></Link> : 
-                                pageNumber === 2 ? 
+                            {pageNumber === 2 ? 
                                 <Button onClick={this.decreaseFunc}>ویرایش اطلاعات</Button> : 
                                 pageNumber === 0 ? null : 
                                 <Button onClick={this.decreaseFunc}>مرحله قبل</Button>}
