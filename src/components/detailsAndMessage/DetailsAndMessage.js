@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-bootstrap';
-
+ 
 const DetailsAndMessage = () => (
             <Row className="detailsAndMessage">
             <Col sm={6} className="right" >

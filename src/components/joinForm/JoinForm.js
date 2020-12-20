@@ -135,22 +135,21 @@ class JoinForm extends React.Component{
                     {pageNumber === 1 ? <UploadImage uploadText="آپلود عکس داروخانه قبلی"/> :null}
                 </Row>
                 <Row >
-                        <div className="buttons">
-                            {pageNumber === 2 ? 
-                                <Button onClick={this.decreaseFunc}>ویرایش اطلاعات</Button> : 
-                                pageNumber === 0 ? null : 
-                                <Button onClick={this.decreaseFunc}>مرحله قبل</Button>}
-                            {pageNumber === 3 ? 
-                                null : 
-                                pageNumber === 2 ? 
-                                <Button onClick={this.increaseFunc}>تکمیل ثبت نام</Button> : 
-                                <Button onClick={this.increaseFunc}>مرحله بعد</Button>}
-                            
-                        </div>
+                    <div className="buttons">
+                        {pageNumber === 2 ? 
+                            <Button onClick={this.decreaseFunc}>ویرایش اطلاعات</Button> : 
+                            pageNumber === 0 ? null : 
+                            <Button onClick={this.decreaseFunc}>مرحله قبل</Button>}
+                        {pageNumber === 3 ? 
+                            null : 
+                            pageNumber === 2 ? 
+                            <Button onClick={this.increaseFunc}>تکمیل ثبت نام</Button> : 
+                            <Button onClick={this.increaseFunc}>مرحله بعد</Button>}
+                    </div>
                 </Row>
             </Container>
         )
     }
 }
-
+ 
 export default JoinForm

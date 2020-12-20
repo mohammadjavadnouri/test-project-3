@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-bootstrap';
 import healthDoctor from "../../assets/healthDoctor.png";
 import TellNumberInput from "../tellNumberInput/TellNumberInput";
-
+ 
 const JoinDrugStore = () => (
     <Row className="joinDrugStore" >
     <Col sm={6} className="right">
@@ -13,7 +13,7 @@ const JoinDrugStore = () => (
         {/* handmade Component end */}
     </Col>
     <Col sm={6} className="left">
-        <Image src={healthDoctor} />
+        <Image src={healthDoctor}  className="leftImage"/>
     </Col>
     </Row>
 );

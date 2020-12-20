@@ -1,0 +1,34 @@
+.upperBlueBar {
+  margin-top: 3vw;
+  background-color: $myBlue;
+  color: $myWhite;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  .text {
+    text-align: center;
+    align-self: center;
+  }
+  .bgr {
+    text-align: right;
+  }
+  .bgl {
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .upperBlueBar {
+    padding: 2rem;
+    text-align: center;
+    .text {
+      display: block;
+      width: 100%;
+    }
+    .bgr {
+      display: none;
+    }
+    .bgl {
+      display: none;
+    }
+  }
+}

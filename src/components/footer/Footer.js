@@ -4,35 +4,44 @@ import {Link} from 'react-router-dom';
 import logo from "../../assets/Group152.svg";
 import bazzarBlackButton from "../../assets/bazzarBlackButton.png";
 import sibAppBlackButton from "../../assets/sibAppBlackButton.png";
-
+ 
 const Footer = () => (
-            <Row className="footer" >
-            <Col sm={4} >
-                <Image src={logo}/>
+        <Row className="footer" >
+            <Col className="meta">
+                <Image src={logo} className="logo"/>
                 <h5>سوپر اپلیکیشن حوزه درمان و سلامت</h5>
                 <p>تمام حقوق مادی و معنوی این وبسایت متعلق به درمانیتو است</p>
-                <i href="#" className="fa fa-linkedin"></i>
-                <i href="#" className="fa fa-twitter"></i>
-                <i href="#" className="fa fa-instagram"></i>
+                <i href="#" className="fa fa-linkedin socialIcon"></i>
+                <i href="#" className="fa fa-twitter socialIcon"></i>
+                <i href="#" className="fa fa-instagram socialIcon"></i>
             </Col>
-            <Col sm={2} >
+            <Col className="services">
                 <h5>خدمات درمانیتو</h5>
+                <br/>
                 <p>داروخانه آنلاین</p>
                 <Link to="/onlineStore"><p>فروشگاه آنلاین</p></Link>
                 <p>ویزیت آنلاین</p>
                 <p>پرونده پزشکی</p>
             </Col>
-            <Col sm={2}>
+            <Col className="pages">
                 <h5>صفحات درمانیتو</h5>
+                <br/>
                 <Link to="/contacts" className="link"><p>تماس باما</p></Link>
                 <Link to="/about" className="link"><p>درباره ما</p></Link>
                 <p>سوالات متداول</p>
                 <p>قوانین و شرایط</p>
             </Col>
-            <Col sm={4} >
-                <h5>دانلود درمانیتو</h5>
-                <Image className="store" src={bazzarBlackButton}/>
-                <Image className="store" src={sibAppBlackButton}/>
+            <Col className="download">
+                <h5 className="title">دانلود درمانیتو</h5>
+                <br/>
+                <Row>
+                    <Col lg={6} className="storeImageCol">
+                        <Image className="storeImage" src={bazzarBlackButton}/>
+                    </Col>
+                    <Col lg={6} className="storeImageCol">
+                        <Image className="storeImage" src={sibAppBlackButton}/>
+                    </Col>
+                </Row>
             </Col>
         </Row>
 )

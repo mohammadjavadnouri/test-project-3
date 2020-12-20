@@ -2,8 +2,8 @@ import React from 'react';
 import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import doctor from "../../assets/doctor_two_color.svg";
-
-
+ 
+ 
 const DarmanitoApp = () => (
     <Row className="darmanitoApp" >
         <Col sm={6} className="right">
@@ -19,7 +19,7 @@ const DarmanitoApp = () => (
             </Row>
         </Col>
         <Col sm={6} className="left">
-            <Image src={doctor}/>
+            <Image src={doctor} className="doctorSVGStyle"/>
             <svg xmlns= "http://www.w3.org/2000/svg" width= "700" className="bg"
             height= "618.916" viewBox= "0 0 943.749 618.916" > 
                 <path id= "Path_15701"

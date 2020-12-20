@@ -40,7 +40,7 @@ const JoinFormNumber4 = () => (
             <path id="Path_15656" data-name="Path 15656" d="M107,252.128l.623-4.378s8.833.475,7.462,3.342S107,252.128,107,252.128Z" transform="translate(-15.882 -43.955)" fill="#e6f3ff"/>
             <g id="Group_5388" data-name="Group 5388" transform="translate(137.721 79.308)">
             <circle id="Ellipse_68" data-name="Ellipse 68" cx="22.114" cy="22.114" r="22.114" fill="#00de9a"/>
-            <path id="Path_15700" data-name="Path 15700" d="M189.11,113.12l5.336,8.693L205.3,106.32" transform="translate(-175.479 -91.91)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+            <path id="Path_15700" data-name="Path 15700" d="M189.11,113.12l5.336,8.693L205.3,106.32" transform="translate(-175.479 -91.91)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="5"/>
             </g>
         </g>
         </svg>
@@ -59,5 +59,5 @@ const JoinFormNumber4 = () => (
         </Modal.Footer>
     </Modal>
 )
-
+ 
 export default JoinFormNumber4;

@@ -4,13 +4,13 @@ import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-boo
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import CallCenter from '../components/callCenter/CallCenter';
-import UpperBlueBarOfContactsPage from '../components/UpperBlueBarOfContactsPage/UpperBlueBarOfContactsPage';
+import UpperBlueBar from '../components/upperBlueBar/UpperBlueBar';
 import DetailsAndMessage from '../components/detailsAndMessage/DetailsAndMessage';
 
 const Contacts = () => (
     <Container className="contacts">
             <Header />
-            <UpperBlueBarOfContactsPage />
+            <UpperBlueBar title="تماس باما"/>
             
             <DetailsAndMessage />
 

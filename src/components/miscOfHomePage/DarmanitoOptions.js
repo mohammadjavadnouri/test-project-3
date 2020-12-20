@@ -5,7 +5,7 @@ import store from "../../assets/store.png";
 import visitOnline from "../../assets/visitOnline.png";
 import nobatDehi from "../../assets/nobatDehi.png";
 
-
+ 
 const DarmanitoOptions = () => (
     <Row className="darmanitoOptions">
         <Container >
@@ -15,7 +15,7 @@ const DarmanitoOptions = () => (
                 </Col>
             </Row>
             <Row >
-                <Col sm={6} >
+                <Col sm={6} className="images">
                     <Image className="image" src={drugStore} />
                     <Image className="image" src={store} />
                     <Image className="image" src={visitOnline} />

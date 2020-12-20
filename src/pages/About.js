@@ -3,7 +3,7 @@ import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-boo
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import CallCenter from '../components/callCenter/CallCenter';
-import UpperBlueBarOfAboutPage from '../components/UpperBlueBarOfAboutPage/UpperBlueBarOfAboutPage';
+import UpperBlueBar from '../components/upperBlueBar/UpperBlueBar';
 
 
 const About = () => (
@@ -11,7 +11,7 @@ const About = () => (
 
         {/*start of handmade components*/}
         <Header />
-        <UpperBlueBarOfAboutPage />
+        <UpperBlueBar title="درباره ما"/>
         <Row>
             <div>
                 <br/>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-bootstrap';
 import callCenter from "../../assets/callCenter.png";
-
+ 
 const CallCenter = () => (
     <Row className="callCenter" >
         <Col sm={6} className="right" >

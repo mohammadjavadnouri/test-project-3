@@ -16,6 +16,7 @@
     .links {
       margin: 0 auto;
       text-align: center;
+      padding-top: 1rem;
       .Navlinks {
         margin: 0 auto;
         text-align: center;
@@ -85,6 +86,42 @@
   }
   .navbar__small {
     display: block;
-    background-color: rgb(6, 180, 29);
+    .header {
+      .logo {
+        text-align: right;
+      }
+      .sandwichButtonCol {
+        text-align: left;
+        margin: 1rem;
+      }
+      .links {
+        text-align: right;
+        display: block;
+        width: 100%;
+        .link {
+          margin: 1rem;
+          color: $myBlack;
+          border-right: solid $myWhite;
+          transition: 0.4s ease;
+          text-decoration: none;
+          display: block;
+          width: 100%;
+        }
+        .link:hover {
+          color: $myBlue;
+          border-right: solid $myGreen;
+          text-indent: 10px;
+          text-decoration: none;
+        }
+      }
+      .buttonCol {
+        display: block;
+        text-align: right;
+        margin-right: 1rem;
+        .button {
+          @include ghostButton;
+        }
+      }
+    }
   }
 }

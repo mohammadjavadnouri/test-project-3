@@ -5,7 +5,7 @@ import damanitoApp from "../../assets/DarmanitoApp.png";
 import downloadBlueButton from "../../assets/downloadBlueButton.png";
 import bazzarBlueButton from "../../assets/bazzarBlueButton.png";
 import sibAppBlueButton from "../../assets/sibAppBlueButton.png";
-
+ 
 const  BlueDownload = () => (
     <Row className="blueDownload" >
         <Col sm={6} className="right" >

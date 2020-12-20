@@ -19,8 +19,11 @@
     }
   }
   .left {
-    width: 100%;
-    height: auto;
     overflow: hidden;
+    place-self: center;
+    .leftImage {
+      width: 100%;
+      height: auto;
+    }
   }
 }

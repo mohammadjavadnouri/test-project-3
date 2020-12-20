@@ -1,13 +1,10 @@
 .joinForm {
   .buttons {
-    display: flex;
-    text-align: left;
-    justify-content: left;
-    place-content: left;
-    align-content: left;
-  }
-  Button {
-    @include primaryButton;
-    text-decoration: none;
+    margin: 0 auto;
+    Button {
+      @include primaryButton;
+      text-decoration: none;
+      margin: 1rem;
+    }
   }
 }
