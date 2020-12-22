@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-bootstrap';
-import drugStore from "../../assets/drugStore.png";
-import store from "../../assets/store.png";
-import visitOnline from "../../assets/visitOnline.png";
-import nobatDehi from "../../assets/nobatDehi.png";
-
+//import drugStore from "../../assets/drugStore.png";
+//import store from "../../assets/store.png";
+//import visitOnline from "../../assets/visitOnline.png";
+//import nobatDehi from "../../assets/nobatDehi.png";
+import { DrugStore, Store, VisitOnline, NobatDehi } from './DarmanitoOptionsSVG';
  
 const DarmanitoOptions = () => (
     <Row className="darmanitoOptions">
@@ -16,10 +16,10 @@ const DarmanitoOptions = () => (
             </Row>
             <Row >
                 <Col sm={6} className="images">
-                    <Image className="image" src={drugStore} />
-                    <Image className="image" src={store} />
-                    <Image className="image" src={visitOnline} />
-                    <Image className="image" src={nobatDehi} />
+                    <DrugStore className="image"  />
+                    <Store className="image" />
+                    <VisitOnline className="image"  />
+                    <NobatDehi className="image"  />
                 </Col>
                 <Col sm={6} className="down__left" >
                     <h5>داروخانه آنلاین</h5>

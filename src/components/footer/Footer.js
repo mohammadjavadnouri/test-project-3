@@ -1,10 +1,11 @@
 import React from 'react';
-import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-bootstrap';
+import { Col, Row, Image } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import logo from "../../assets/Group152.svg";
-import bazzarBlackButton from "../../assets/bazzarBlackButton.png";
-import sibAppBlackButton from "../../assets/sibAppBlackButton.png";
- 
+
+import BazzarSVGIcon from './BazzarSVGIcon';
+import SibAppSVGIcon from './SibAppSVGIcon';
+
 const Footer = () => (
         <Row className="footer" >
             <Col className="meta">
@@ -36,14 +37,14 @@ const Footer = () => (
                 <br/>
                 <Row>
                     <Col lg={6} className="storeImageCol">
-                        <Image className="storeImage" src={bazzarBlackButton}/>
+                        <SibAppSVGIcon className="storeImage" />
                     </Col>
                     <Col lg={6} className="storeImageCol">
-                        <Image className="storeImage" src={sibAppBlackButton}/>
+                        <BazzarSVGIcon className="storeImage"/>
                     </Col>
                 </Row>
             </Col>
         </Row>
 )
-
+ 
 export default Footer;

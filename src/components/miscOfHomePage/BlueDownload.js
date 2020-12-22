@@ -2,9 +2,8 @@ import React from 'react';
 import { Col, Row, Image } from 'react-bootstrap';
 import TellNumberInput from "../tellNumberInput/TellNumberInput";
 import damanitoApp from "../../assets/DarmanitoApp.png";
-import downloadBlueButton from "../../assets/downloadBlueButton.png";
-import bazzarBlueButton from "../../assets/bazzarBlueButton.png";
-import sibAppBlueButton from "../../assets/sibAppBlueButton.png";
+import { SibAppSVGBlue, DirectSVGBlue, BazzarSVGBlue} from './SVGDownloadIconsBlue';
+
  
 const  BlueDownload = () => (
     <Row className="blueDownload" >
@@ -15,9 +14,9 @@ const  BlueDownload = () => (
             <TellNumberInput buttonText="بفرست"/>
             {/* handmade Component end */}
             <div className="store">
-                <Image className="store__icon" src={downloadBlueButton}/>
-                <Image className="store__icon" src={bazzarBlueButton}/>
-                <Image className="store__icon" src={sibAppBlueButton}/>
+                <DirectSVGBlue  />
+                <BazzarSVGBlue  />
+                <SibAppSVGBlue  />
             </div>
         </Col>
         <Col sm={6} className="left" >

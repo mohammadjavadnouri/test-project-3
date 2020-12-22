@@ -9,5 +9,12 @@
   .left {
     align-self: center;
     text-align: center;
+    .svg {
+      width: 50%;
+      height: auto;
+      .content {
+        display: flex;
+      }
+    }
   }
 }

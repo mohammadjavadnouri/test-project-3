@@ -2,5 +2,17 @@
   text-align: right;
   .right {
     align-self: center;
+    .title {
+      color: $myBlue;
+      text-indent: 10px;
+    }
+  }
+  .left {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-self: right;
   }
 }
