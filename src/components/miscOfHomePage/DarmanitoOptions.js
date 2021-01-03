@@ -4,7 +4,7 @@ import { Container, Col, Row, Button, Nav, Image, Form, Figure } from 'react-boo
 //import store from "../../assets/store.png";
 //import visitOnline from "../../assets/visitOnline.png";
 //import nobatDehi from "../../assets/nobatDehi.png";
-import { DrugStore, Store, VisitOnline, NobatDehi } from './DarmanitoOptionsSVG';
+import { DrugStore, Store, VisitOnline, NobatDehi } from './SVGs';
  
 const DarmanitoOptions = () => (
     <Row className="darmanitoOptions">

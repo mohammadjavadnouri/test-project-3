@@ -2,10 +2,8 @@ import React from 'react';
 import { Col, Row, Image } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import logo from "../../assets/Group152.svg";
-
-import BazzarSVGIcon from './BazzarSVGIcon';
-import SibAppSVGIcon from './SibAppSVGIcon';
-
+import { BazzarSVGIcon, SibAppSVGIcon } from './SVGs';
+ 
 const Footer = () => (
         <Row className="footer" >
             <Col className="meta">

@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row, Image } from 'react-bootstrap';
 import TellNumberInput from "../tellNumberInput/TellNumberInput";
 import damanitoApp from "../../assets/DarmanitoApp.png";
-import { SibAppSVGBlue, DirectSVGBlue, BazzarSVGBlue} from './SVGDownloadIconsBlue';
+import { SibAppSVGBlue, DirectSVGBlue, BazzarSVGBlue} from './SVGs';
 
  
 const  BlueDownload = () => (
