@@ -1,27 +1,32 @@
-import React from 'react';
-import { Button, Modal } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import RegisterCompleteSVG from './RegisterCompleteSVG';
+import React from "react";
+import { Button, Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import RegisterCompleteSVG from "./RegisterCompleteSVG";
 
-const JoinFormNumber4 = () => (
-    <Modal show={true} className="joinFormModal">
-
+class JoinFormNumber4 extends React.Component {
+  render() {
+    if (this.props.currentStep !== 3) {
+      return null;
+    }
+    return (
+      <Modal show={true} className="joinFormModal">
         <Modal.Body className="body">
-        <RegisterCompleteSVG />
+          <RegisterCompleteSVG />
 
-        <div className="title"><h5>ثبت نام با موفقیت انجام شد</h5></div>
-        <div className="text">برای اعلام توضیحات با شما تماس خواهیم گرفت</div>
+          <div className="title">
+            <h5>ثبت نام با موفقیت انجام شد</h5>
+          </div>
+          <div className="text">برای اعلام توضیحات با شما تماس خواهیم گرفت</div>
         </Modal.Body>
 
         <Modal.Footer className="footer">
-            
-            <Link to="/">
-                <Button className="button" >
-                برگشت
-                </Button>
-            </Link>
+          <Link to="/">
+            <Button className="button">برگشت</Button>
+          </Link>
         </Modal.Footer>
-    </Modal>
-)
- 
+      </Modal>
+    );
+  }
+}
+
 export default JoinFormNumber4;

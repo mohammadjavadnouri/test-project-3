@@ -1,14 +1,13 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
-import JoinForm from '../components/joinForm/JoinForm';
+import React from "react";
+import { Container } from "react-bootstrap";
+import Header from "../components/header/Header";
+import MasterForm from "../components/joinForm/MasterForm";
 
 const Join = () => (
-    <Container>
-        <Header />
-        <JoinForm />
-    </Container>
-)
+  <Container>
+    <Header />
+    <MasterForm />
+  </Container>
+);
 
 export default Join;
