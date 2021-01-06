@@ -55,15 +55,31 @@ class JoinFormNumber1 extends React.Component {
             <Form>
               <Form.Group controlId="formBasicText">
                 <Form.Label>نام و نام خانوادگی موسس</Form.Label>
+                <Form.Label>
+                  <small style={{ color: "red" }}>
+                    *
+                    {this.props.errors["name"]
+                      ? this.props.errors["name"]
+                      : null}
+                  </small>
+                </Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="نام داروخانه شما در اپلیکیشن"
+                  placeholder="نام شما در اپلیکیشن"
                   value={this.props.name}
                   onChange={this.props.handleName}
                 />
               </Form.Group>
               <Form.Group controlId="formBasicText">
                 <Form.Label>نام داروخانه / فروشگاه</Form.Label>
+                <Form.Label>
+                  <small style={{ color: "red" }}>
+                    *
+                    {this.props.errors["drugStoreName"]
+                      ? this.props.errors["drugStoreName"]
+                      : null}
+                  </small>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="نام داروخانه یا فروشگاه شما"
@@ -73,6 +89,14 @@ class JoinFormNumber1 extends React.Component {
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>شهر</Form.Label>
+                <Form.Label>
+                  <small style={{ color: "red" }}>
+                    *
+                    {this.props.errors["city"]
+                      ? this.props.errors["city"]
+                      : null}
+                  </small>
+                </Form.Label>
                 <Form.Control
                   as="select"
                   value={this.props.city}
@@ -95,12 +119,16 @@ class JoinFormNumber1 extends React.Component {
           <Col sm={6}>
             <Form>
               <Form.Group controlId="formBasicText">
+                <Form.Label>شماره نظام پزشکی</Form.Label>
                 <Form.Label>
-                  شماره نظام پزشکی
-                  <span> فقط عدد </span>
+                  <small style={{ color: "red" }}>
+                    *
+                    {this.props.errors["medicalCouncilID"]
+                      ? this.props.errors["medicalCouncilID"]
+                      : null}
+                  </small>
                 </Form.Label>
                 <Form.Control
-                  type="number"
                   placeholder="فقط بخش عددی را وارد کنید"
                   value={this.props.medicalCouncilID}
                   onChange={this.props.handleMedicalCouncilID}
@@ -108,6 +136,14 @@ class JoinFormNumber1 extends React.Component {
               </Form.Group>
               <Form.Group controlId="formBasicText">
                 <Form.Label>شماره داروخانه</Form.Label>
+                <Form.Label>
+                  <small style={{ color: "red" }}>
+                    *
+                    {this.props.errors["drugStoreNumber"]
+                      ? this.props.errors["drugStoreNumber"]
+                      : null}
+                  </small>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="اطلاعات تماس به کاربر نمایش داده میشود"
@@ -136,6 +172,14 @@ class JoinFormNumber1 extends React.Component {
             <Form>
               <Form.Group controlId="formBasicText">
                 <Form.Label>آدرس دقیق</Form.Label>
+                <Form.Label>
+                  <small style={{ color: "red" }}>
+                    *
+                    {this.props.errors["address"]
+                      ? this.props.errors["address"]
+                      : null}
+                  </small>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="آدرس را با - جدا کنید"
@@ -150,8 +194,17 @@ class JoinFormNumber1 extends React.Component {
         <Row>
           <Col sm={6}>
             <div>
-              <p>ساعات کاری</p>
+              <p>
+                ساعات کاری
+                <small style={{ color: "red" }}>
+                  *
+                  {this.props.errors["dayAndNight"]
+                    ? this.props.errors["dayAndNight"]
+                    : null}
+                </small>
+              </p>
             </div>
+
             <Form>
               <Row>
                 <Col sm={3}>
@@ -191,9 +244,17 @@ class JoinFormNumber1 extends React.Component {
               <Row>
                 <Col sm={4}>
                   <Form.Group>
-                    <Form.Label>پایان کار</Form.Label>
+                    <Form.Label>شروع کار</Form.Label>
+                    <Form.Label>
+                      <small style={{ color: "red" }}>
+                        *
+                        {this.props.errors["fromHour"]
+                          ? this.props.errors["fromHour"]
+                          : null}
+                      </small>
+                    </Form.Label>
                     <Form.Control
-                      type="number"
+                      type="string"
                       value={this.props.fromHour}
                       onChange={this.props.handleFromHour}
                     />
@@ -201,9 +262,17 @@ class JoinFormNumber1 extends React.Component {
                 </Col>
                 <Col sm={4}>
                   <Form.Group>
-                    <Form.Label>شروع کار</Form.Label>
+                    <Form.Label>پایان کار</Form.Label>
+                    <Form.Label>
+                      <small style={{ color: "red" }}>
+                        *
+                        {this.props.errors["tillHour"]
+                          ? this.props.errors["tillHour"]
+                          : null}
+                      </small>
+                    </Form.Label>
                     <Form.Control
-                      type="number"
+                      type="string"
                       value={this.props.tillHour}
                       onChange={this.props.handleTillHour}
                     />

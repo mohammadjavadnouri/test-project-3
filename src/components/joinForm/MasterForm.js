@@ -11,6 +11,7 @@ class MasterForm extends React.Component {
     super(props);
     this.state = {
       currentStep: 0,
+      errors: {},
       name: "",
       name2: "",
       medicalCouncilID: "",
@@ -38,7 +39,8 @@ class MasterForm extends React.Component {
       uploadedImageURL: "",
       uploadedImageURL2: "",
     };
-    this.increaseFunc = this.increaseFunc.bind(this);
+    //this.increaseFunc = this.increaseFunc.bind(this);
+    this.handleValidation = this.handleValidation.bind(this);
     this.decreaseFunc = this.decreaseFunc.bind(this);
     this.handleName = this.handleName.bind(this);
     this.urlHandler = this.urlHandler.bind(this);
@@ -64,9 +66,103 @@ class MasterForm extends React.Component {
     this.handleTillHour2 = this.handleTillHour2.bind(this);
     this.handleFromHour2 = this.handleFromHour2.bind(this);
   }
+
+  handleValidation() {
+    let errors = {};
+    let formIsValid = true;
+
+    if (!this.state.name) {
+      formIsValid = false;
+      errors["name"] = "تکمیل این فیلد اجباری است";
+    }
+
+    if (this.state.name) {
+      if (!this.state.name.match(/^[a-zA-Zا-ی]+$/)) {
+        formIsValid = false;
+        errors["name"] = " فقط حروف فارسی یا انگلیسی";
+      }
+    }
+
+    if (!this.state.drugStoreName) {
+      formIsValid = false;
+      errors["drugStoreName"] = "تکمیل این فیلد اجباری است";
+    }
+
+    if (!this.state.city) {
+      formIsValid = false;
+      errors["city"] = "تکمیل این فیلد اجباری است";
+    }
+
+    if (!this.state.medicalCouncilID) {
+      formIsValid = false;
+      errors["medicalCouncilID"] = "تکمیل این فیلد اجباری است";
+    }
+
+    if (this.state.medicalCouncilID) {
+      if (!this.state.medicalCouncilID.match(/^[0-9]+$/)) {
+        formIsValid = false;
+        errors["medicalCouncilID"] = " فقط عدد";
+      }
+    }
+
+    if (!this.state.drugStoreNumber) {
+      formIsValid = false;
+      errors["drugStoreNumber"] = "تکمیل این فیلد اجباری است";
+    }
+
+    if (this.state.drugStoreNumber) {
+      if (!this.state.drugStoreNumber.match(/^[0-9]+$/)) {
+        formIsValid = false;
+        errors["drugStoreNumber"] = " فقط عدد";
+      }
+    }
+
+    if (!this.state.address) {
+      formIsValid = false;
+      errors["address"] = "تکمیل این فیلد اجباری است";
+    }
+
+    if (!this.state.daily && !this.state.dayAndNight) {
+      formIsValid = false;
+      errors["dayAndNight"] = "تکمیل این فیلد اجباری است";
+    }
+
+    if (!this.state.fromHour) {
+      formIsValid = false;
+      errors["fromHour"] = "فیلد اجباری";
+    }
+
+    if (this.state.fromHour) {
+      if (!this.state.fromHour.match(/^[0-9,:]+$/)) {
+        formIsValid = false;
+        errors["fromHour"] = "فقط عدد و  : ";
+      }
+    }
+
+    if (!this.state.tillHour) {
+      formIsValid = false;
+      errors["tillHour"] = "فیلد اجباری";
+    }
+
+    if (this.state.tillHour) {
+      if (!this.state.tillHour.match(/^[0-9,:]+$/)) {
+        formIsValid = false;
+        errors["tillHour"] = "فقط عدد و  : ";
+      }
+    }
+
+    if (formIsValid) {
+      errors = {};
+      this.setState({ errors: {} });
+      this.increaseFunc = this.increaseFunc.bind(this);
+      this.increaseFunc();
+    } else this.setState({ errors: errors });
+  }
+
   increaseFunc() {
     this.setState({ currentStep: this.state.currentStep + 1 });
   }
+
   decreaseFunc() {
     this.state.currentStep > 0
       ? this.setState({ currentStep: this.state.currentStep - 1 })
@@ -184,6 +280,7 @@ class MasterForm extends React.Component {
         <Row>
           <JoinFormNumber1
             currentStep={this.state.currentStep}
+            errors={this.state.errors}
             handleName={this.handleName}
             name={this.state.name}
             handleDrugstoreName={this.handleDrugstoreName}
@@ -269,7 +366,7 @@ class MasterForm extends React.Component {
               2 ? (
               <Button onClick={this.increaseFunc}>تکمیل ثبت نام</Button>
             ) : (
-              <Button onClick={this.increaseFunc}>مرحله بعد</Button>
+              <Button onClick={this.handleValidation}>مرحله بعد</Button>
             )}
           </div>
         </Row>

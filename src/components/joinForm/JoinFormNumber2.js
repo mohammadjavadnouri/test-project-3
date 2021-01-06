@@ -57,7 +57,7 @@ class JoinFormNumber2 extends React.Component {
                 <Form.Label>نام و نام خانوادگی موسس 2</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="2 نام داروخانه شما در اپلیکیشن"
+                  placeholder="2 نام شما در اپلیکیشن"
                   value={this.props.name2}
                   onChange={this.props.handleName2}
                 />
