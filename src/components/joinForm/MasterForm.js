@@ -315,7 +315,7 @@ class MasterForm extends React.Component {
             handleMedicalCouncilID2={this.handleMedicalCouncilID2}
             medicalCouncilID2={this.state.medicalCouncilID2}
             handleDrugstoreNumber2={this.handleDrugstoreNumber2}
-            drugStoreNumber2={this.state.drugStoreName2}
+            drugStoreNumber2={this.state.drugStoreNumber2}
             handleZone2={this.handleZone2}
             zone2={this.state.zone2}
             handleAddress2={this.handleAddress2}
