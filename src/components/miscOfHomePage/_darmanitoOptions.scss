@@ -4,18 +4,55 @@
   margin-top: 2vw;
   text-align: right;
 
-  Container {
-    max-width: "100%";
-  }
   .up {
     color: $myBlue;
     border-right: solid $myGreen;
     text-indent: 10px;
   }
+
   .images {
-    @media only screen and (max-width: 576px) {
+    display: block;
+    .row1 {
       display: flex;
-      width: 8rem;
+    }
+    .row2 {
+      display: flex;
+    }
+    .optionsIconStyle {
+      width: 80%;
+      height: auto;
+    }
+  }
+
+  @media only screen and (max-width: 728px) {
+    .images {
+      display: block;
+      .row1 {
+        display: block;
+      }
+      .row2 {
+        display: block;
+      }
+      .optionsIconStyle {
+        width: 60%;
+        height: auto;
+      }
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .images {
+      display: flex;
+      overflow: scroll;
+      .row1 {
+        display: flex;
+      }
+      .row2 {
+        display: flex;
+      }
+      .optionsIconStyle {
+        width: 30vw;
+        height: auto;
+      }
     }
   }
   .down__left {

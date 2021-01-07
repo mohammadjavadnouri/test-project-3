@@ -13,9 +13,14 @@
       flex-flow: nowrap;
     }
     .store__icon {
-      width: 50%;
+      width: 12vw;
       height: auto;
       border-radius: 1vw;
+      @media only screen and (max-width: 576px) {
+        width: 25vw;
+        height: auto;
+        border-radius: 1vw;
+      }
     }
     .store__icon:hover {
       cursor: pointer;

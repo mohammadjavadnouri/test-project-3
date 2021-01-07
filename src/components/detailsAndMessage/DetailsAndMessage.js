@@ -7,10 +7,18 @@ import RegisterCompleteSVG from "../joinForm/RegisterCompleteSVG";
 class DetailsAndMessage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { errors: {}, modal: false, name: "" };
+    this.state = {
+      errors: {},
+      modal: false,
+      name: "",
+      emailOrNumber: "",
+      message: "",
+    };
     this.handleValidation = this.handleValidation.bind(this);
     this.nameHandler = this.nameHandler.bind(this);
     this.handleResetModal = this.handleResetModal.bind(this);
+    this.emailOrNumberHandler = this.emailOrNumberHandler.bind(this);
+    this.messageHandler = this.messageHandler.bind(this);
   }
 
   handleValidation() {
@@ -20,6 +28,16 @@ class DetailsAndMessage extends React.Component {
     if (!this.state.name) {
       isValid = false;
       errors["name"] = "پر کردن این فیلد اجباری است";
+    }
+
+    if (!this.state.emailOrNumber) {
+      isValid = false;
+      errors["emailOrNumber"] = "ایمیل یا شماره تلفن اجباری است";
+    }
+
+    if (!this.state.message) {
+      isValid = false;
+      errors["message"] = "این فیلد اجباری است";
     }
 
     if (isValid) {
@@ -32,6 +50,14 @@ class DetailsAndMessage extends React.Component {
 
   nameHandler(evt) {
     this.setState({ name: evt.target.value });
+  }
+
+  emailOrNumberHandler(evt) {
+    this.setState({ emailOrNumber: evt.target.value });
+  }
+
+  messageHandler(evt) {
+    this.setState({ message: evt.target.value });
   }
 
   handleResetModal() {
@@ -59,15 +85,35 @@ class DetailsAndMessage extends React.Component {
             </Form.Group>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>ایمیل یا شماره همراه</Form.Label>
-
-              <Form.Control type="email" placeholder="ایمیل یا شماره همراه" />
+              <Form.Label>
+                <small style={{ color: "red" }}>
+                  *
+                  {this.state.errors["emailOrNumber"]
+                    ? this.state.errors["emailOrNumber"]
+                    : null}
+                </small>
+              </Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="ایمیل یا شماره همراه"
+                onChange={this.emailOrNumberHandler}
+              />
             </Form.Group>
             <Form.Group controlId="formBasicText">
               <Form.Label>پیام شما</Form.Label>
+              <Form.Label>
+                <small style={{ color: "red" }}>
+                  *
+                  {this.state.errors["message"]
+                    ? this.state.errors["message"]
+                    : null}
+                </small>
+              </Form.Label>
               <Form.Control
                 type="text"
                 placeholder="متن پیام"
                 className="message"
+                onChange={this.messageHandler}
               />
             </Form.Group>
             <Button
