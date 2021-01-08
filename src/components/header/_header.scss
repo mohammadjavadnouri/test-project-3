@@ -53,11 +53,19 @@
     display: none;
   }
   .navbar {
+    font-size: 14px;
     .header__smaill {
       display: none;
     }
     .header {
-      width: 90%;
+      width: 95%;
+      .logo {
+        align-self: center;
+        text-align: right;
+        .logo-self {
+          width: 7rem;
+        }
+      }
       .links {
         .Navlinks {
           margin: 0 auto;
@@ -89,6 +97,10 @@
     .header {
       .logo {
         text-align: right;
+        align-self: center;
+        .logo-self {
+          width: 7rem;
+        }
       }
       .sandwichButtonCol {
         text-align: left;
