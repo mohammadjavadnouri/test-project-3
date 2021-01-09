@@ -7,9 +7,6 @@ class JoinFormNumber3 extends React.Component {
   }
 
   render() {
-    if (this.props.currentStep !== 2) {
-      return null;
-    }
     return (
       <Container className="joinFormNumber3">
         <Row className="row">

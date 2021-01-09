@@ -4,50 +4,43 @@ import { Container, Row, Col, Form } from "react-bootstrap";
 class JoinFormNumber2 extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { city2: "" };
+    this.state = { city2: "", zone1: "", zone2: "", zone3: "" };
     this.handleCityName2 = this.handleCityName2.bind(this);
   }
 
   handleCityName2(evt) {
     this.setState({ city2: evt.target.value });
+
+    switch (evt.target.value) {
+      case "تهران":
+        this.setState({ zone1: "تهران منطقه 1" });
+        this.setState({ zone2: "تهران منطقه 2" });
+        this.setState({ zone3: "تهران منطقه 3" });
+        break;
+      case "اصفهان":
+        this.setState({ zone1: "اصفهان منطقه 1" });
+        this.setState({ zone2: "اصفهان منطقه 2" });
+        this.setState({ zone3: "اصفهان منطقه 3" });
+        break;
+      case "شیراز":
+        this.setState({ zone1: "شیراز منطقه 1" });
+        this.setState({ zone2: "شیراز منطقه 2" });
+        this.setState({ zone3: "شیراز منطقه 3" });
+        break;
+      case "یزد":
+        this.setState({ zone1: "یزد منطقه 1" });
+        this.setState({ zone2: "یزد منطقه 2" });
+        this.setState({ zone3: "یزد منطقه 3" });
+        break;
+      case "گیلان":
+        this.setState({ zone1: "گیلان منطقه 1" });
+        this.setState({ zone2: "گیلان منطقه 2" });
+        this.setState({ zone3: "گیلان منطقه 3" });
+        break;
+    }
   }
 
   render() {
-    if (this.props.currentStep !== 1) {
-      return null;
-    }
-    let zone1;
-    let zone2;
-    let zone3;
-
-    switch (this.state.city2) {
-      case "تهران":
-        zone1 = "تهران منطقه 1";
-        zone2 = "تهران منطقه 2";
-        zone3 = "تهران منطقه 3";
-        break;
-      case "اصفهان":
-        zone1 = "اصفهان منطقه 1";
-        zone2 = "اصفهان منطقه 2";
-        zone3 = "اصفهان منطقه 3";
-        break;
-      case "شیراز":
-        zone1 = "شیراز منطقه 1";
-        zone2 = "شیراز منطقه 2";
-        zone3 = "شیراز منطقه 3";
-        break;
-      case "یزد":
-        zone1 = "یزد منطقه 1";
-        zone2 = "یزد منطقه 2";
-        zone3 = "یزد منطقه 3";
-        break;
-      case "گیلان":
-        zone1 = "گیلان منطقه 1";
-        zone2 = "گیلان منطقه 2";
-        zone3 = "گیلان منطقه 3";
-        break;
-    }
-
     return (
       <Container className="joinFormNumber1">
         <Row>
@@ -121,9 +114,9 @@ class JoinFormNumber2 extends React.Component {
                   value={this.props.zone2}
                   onChange={this.props.handleZone2}
                 >
-                  <option>{zone1}</option>
-                  <option>{zone2}</option>
-                  <option>{zone3}</option>
+                  <option>{this.state.zone1}</option>
+                  <option>{this.state.zone2}</option>
+                  <option>{this.state.zone3}</option>
                 </Form.Control>
               </Form.Group>
             </Form>

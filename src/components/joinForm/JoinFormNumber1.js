@@ -4,7 +4,7 @@ import { Container, Row, Col, Form } from "react-bootstrap";
 class JoinFormNumber1 extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { city: "" };
+    this.state = { city: "", zone1: "", zone2: "", zone3: "" };
     this.handleCityName = this.handleCityName.bind(this);
   }
 
@@ -13,41 +13,6 @@ class JoinFormNumber1 extends React.Component {
   }
 
   render() {
-    if (this.props.currentStep !== 0) {
-      return null;
-    }
-    let zone1;
-    let zone2;
-    let zone3;
-
-    switch (this.state.city) {
-      case "تهران":
-        zone1 = "تهران منطقه 1";
-        zone2 = "تهران منطقه 2";
-        zone3 = "تهران منطقه 3";
-        break;
-      case "اصفهان":
-        zone1 = "اصفهان منطقه 1";
-        zone2 = "اصفهان منطقه 2";
-        zone3 = "اصفهان منطقه 3";
-        break;
-      case "شیراز":
-        zone1 = "شیراز منطقه 1";
-        zone2 = "شیراز منطقه 2";
-        zone3 = "شیراز منطقه 3";
-        break;
-      case "یزد":
-        zone1 = "یزد منطقه 1";
-        zone2 = "یزد منطقه 2";
-        zone3 = "یزد منطقه 3";
-        break;
-      case "گیلان":
-        zone1 = "گیلان منطقه 1";
-        zone2 = "گیلان منطقه 2";
-        zone3 = "گیلان منطقه 3";
-        break;
-    }
-
     return (
       <Container className="joinFormNumber1">
         <Row>
@@ -158,9 +123,9 @@ class JoinFormNumber1 extends React.Component {
                   value={this.props.zone}
                   onChange={this.props.handleZone}
                 >
-                  <option>{zone1}</option>
-                  <option>{zone2}</option>
-                  <option>{zone3}</option>
+                  <option>{this.props.zone1}</option>
+                  <option>{this.props.zone2}</option>
+                  <option>{this.props.zone3}</option>
                 </Form.Control>
               </Form.Group>
             </Form>

@@ -21,6 +21,9 @@ class MasterForm extends React.Component {
       drugStoreNumber: "",
       drugStoreNumber2: "",
       city: "",
+      zone1: "",
+      zone2: "",
+      zone3: "",
       city2: "",
       zone: "",
       zone2: "",
@@ -179,6 +182,33 @@ class MasterForm extends React.Component {
 
   handleCity(evt) {
     this.setState({ city: evt.target.value });
+    switch (evt.target.value) {
+      case "تهران":
+        this.setState({ zone1: "تهران منطقه 1" });
+        this.setState({ zone2: "تهران منطقه 2" });
+        this.setState({ zone3: "تهران منطقه 3" });
+        break;
+      case "اصفهان":
+        this.setState({ zone1: "اصفهان منطقه 1" });
+        this.setState({ zone2: "اصفهان منطقه 2" });
+        this.setState({ zone3: "اصفهان منطقه 3" });
+        break;
+      case "شیراز":
+        this.setState({ zone1: "شیراز منطقه 1" });
+        this.setState({ zone2: "شیراز منطقه 2" });
+        this.setState({ zone3: "شیراز منطقه 3" });
+        break;
+      case "یزد":
+        this.setState({ zone1: "یزد منطقه 1" });
+        this.setState({ zone2: "یزد منطقه 2" });
+        this.setState({ zone3: "یزد منطقه 3" });
+        break;
+      case "گیلان":
+        this.setState({ zone1: "گیلان منطقه 1" });
+        this.setState({ zone2: "گیلان منطقه 2" });
+        this.setState({ zone3: "گیلان منطقه 3" });
+        break;
+    }
   }
 
   handleMedicalCouncilID(evt) {
@@ -191,6 +221,7 @@ class MasterForm extends React.Component {
 
   handleZone(evt) {
     this.setState({ zone: evt.target.value });
+    console.log(evt.target.value);
   }
 
   handleAddress(evt) {
@@ -278,71 +309,76 @@ class MasterForm extends React.Component {
     return (
       <Container className="joinForm">
         <Row>
-          <JoinFormNumber1
-            currentStep={this.state.currentStep}
-            errors={this.state.errors}
-            handleName={this.handleName}
-            name={this.state.name}
-            handleDrugstoreName={this.handleDrugstoreName}
-            drugStoreName={this.state.drugStoreName}
-            handleCityName={this.handleCity}
-            city={this.state.city}
-            handleMedicalCouncilID={this.handleMedicalCouncilID}
-            medicalCouncilID={this.state.medicalCouncilID}
-            handleDrugstoreNumber={this.handleDrugstoreNumber}
-            drugStoreNumber={this.state.drugStoreNumber}
-            handleZone={this.handleZone}
-            zone={this.state.zone}
-            handleAddress={this.handleAddress}
-            address={this.state.address}
-            handleDaily={this.handleDaily}
-            daily={this.state.daily}
-            handleDayAndNight={this.handleDayAndNight}
-            dayAndNight={this.state.dayAndNight}
-            handleFromHour={this.handleFromHour}
-            fromHour={this.state.fromHour}
-            handleTillHour={this.handleTillHour}
-            tillHour={this.state.tillHour}
-          />
-          <JoinFormNumber2
-            currentStep={this.state.currentStep}
-            handleName2={this.handleName2}
-            name2={this.state.name2}
-            handleDrugstoreName2={this.handleDrugstoreName2}
-            drugStoreName2={this.state.drugStoreName2}
-            handleCityName2={this.handleCityName2}
-            city2={this.state.city2}
-            handleMedicalCouncilID2={this.handleMedicalCouncilID2}
-            medicalCouncilID2={this.state.medicalCouncilID2}
-            handleDrugstoreNumber2={this.handleDrugstoreNumber2}
-            drugStoreNumber2={this.state.drugStoreNumber2}
-            handleZone2={this.handleZone2}
-            zone2={this.state.zone2}
-            handleAddress2={this.handleAddress2}
-            address2={this.state.address2}
-            handleDaily2={this.handleDaily2}
-            daily2={this.state.daily2}
-            handleDayAndNight2={this.handleDayAndNight2}
-            dayAndNight2={this.state.dayAndNight2}
-            handleFromHour2={this.handleFromHour2}
-            fromHour2={this.state.fromHour2}
-            handleTillHour2={this.handleTillHour2}
-            tillHour2={this.state.tillHour2}
-          />
-          <JoinFormNumber3
-            currentStep={this.state.currentStep}
-            name={this.state.name}
-            drugStoreName={this.state.drugStoreName}
-            cityName={this.state.city}
-            medicalCouncilID={this.state.medicalCouncilID}
-            uploadedImageURL={this.state.uploadedImageURL}
-            drugStoreNumber={this.state.drugStoreNumber}
-            zone={this.state.zone}
-            address={this.state.address}
-            daily={this.state.daily}
-            dayAndNight={this.state.dayAndNight}
-          />
-          <JoinFormNumber4 currentStep={this.state.currentStep} />
+          {this.state.currentStep === 0 ? (
+            <JoinFormNumber1
+              errors={this.state.errors}
+              handleName={this.handleName}
+              name={this.state.name}
+              handleDrugstoreName={this.handleDrugstoreName}
+              drugStoreName={this.state.drugStoreName}
+              handleCityName={this.handleCity}
+              city={this.state.city}
+              handleMedicalCouncilID={this.handleMedicalCouncilID}
+              medicalCouncilID={this.state.medicalCouncilID}
+              handleDrugstoreNumber={this.handleDrugstoreNumber}
+              drugStoreNumber={this.state.drugStoreNumber}
+              handleZone={this.handleZone}
+              zone={this.state.zone}
+              zone1={this.state.zone1}
+              zone2={this.state.zone2}
+              zone3={this.state.zone3}
+              handleAddress={this.handleAddress}
+              address={this.state.address}
+              handleDaily={this.handleDaily}
+              daily={this.state.daily}
+              handleDayAndNight={this.handleDayAndNight}
+              dayAndNight={this.state.dayAndNight}
+              handleFromHour={this.handleFromHour}
+              fromHour={this.state.fromHour}
+              handleTillHour={this.handleTillHour}
+              tillHour={this.state.tillHour}
+            />
+          ) : this.state.currentStep === 1 ? (
+            <JoinFormNumber2
+              handleName2={this.handleName2}
+              name2={this.state.name2}
+              handleDrugstoreName2={this.handleDrugstoreName2}
+              drugStoreName2={this.state.drugStoreName2}
+              handleCityName2={this.handleCityName2}
+              city2={this.state.city2}
+              handleMedicalCouncilID2={this.handleMedicalCouncilID2}
+              medicalCouncilID2={this.state.medicalCouncilID2}
+              handleDrugstoreNumber2={this.handleDrugstoreNumber2}
+              drugStoreNumber2={this.state.drugStoreNumber2}
+              handleZone2={this.handleZone2}
+              zone2={this.state.zone2}
+              handleAddress2={this.handleAddress2}
+              address2={this.state.address2}
+              handleDaily2={this.handleDaily2}
+              daily2={this.state.daily2}
+              handleDayAndNight2={this.handleDayAndNight2}
+              dayAndNight2={this.state.dayAndNight2}
+              handleFromHour2={this.handleFromHour2}
+              fromHour2={this.state.fromHour2}
+              handleTillHour2={this.handleTillHour2}
+              tillHour2={this.state.tillHour2}
+            />
+          ) : this.state.currentStep === 2 ? (
+            <JoinFormNumber3
+              name={this.state.name}
+              drugStoreName={this.state.drugStoreName}
+              cityName={this.state.city}
+              medicalCouncilID={this.state.medicalCouncilID}
+              uploadedImageURL={this.state.uploadedImageURL}
+              drugStoreNumber={this.state.drugStoreNumber}
+              zone={this.state.zone}
+              address={this.state.address}
+              daily={this.state.daily}
+              dayAndNight={this.state.dayAndNight}
+            />
+          ) : this.state.currentStep === 3 ? (
+            <JoinFormNumber4 />
+          ) : null}
         </Row>
         <Row>
           {this.state.currentStep === 0 ? (

@@ -5,9 +5,6 @@ import RegisterCompleteSVG from "./RegisterCompleteSVG";
 
 class JoinFormNumber4 extends React.Component {
   render() {
-    if (this.props.currentStep !== 3) {
-      return null;
-    }
     return (
       <Modal show={true} className="joinFormModal">
         <Modal.Body className="body">
